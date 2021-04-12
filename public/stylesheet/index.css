@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+li {
+    cursor: pointer;
+}
+
+.part_top {
+    margin-top: 10px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ece7e7ee;
+}
+
+.part_top_head {
+    width: 1000px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.head_left_font {
+    float: left;
+    font-size: 12px;
+}
+
+.head_right_font {
+    float: right;
+    font-size: 12px;
+
+}
+
+.tt_font_left {
+    float: left;
+}
+
+.tt_font {
+    float: left;
+}
+
+.tt_font div {
+    float: left;
+}
+
+.tt_font a:link {
+    color: #C3ACA5;
+    text-decoration: none;
+}
+
+.tt_font a:hover {
+    color: red;
+}
+
+.kk_border {
+
+    height: 18px;
+    border-left: 1px solid #C3ACA5;
+    padding-left: 6px;
+}
+
+.tt_font a {
+    margin-top: 4px;
+}
+
+.tt_font img {
+    margin-top: 4px;
+}
+
+.part1 {
+    margin-top: 39px;
+    position: relative;
+}
+
+.part11 {
+    margin-top: 30px;
+    width: 1000px;
+    height: 83px;
+    margin: 0 auto;
+}
+
+.part1_element1 {
+    float: left;
+}
+
+.part1_element1>img {
+    position: absolute;
+    top: 3px;
+    left: 195px;
+}
+
+.ppp {
+    position: absolute;
+    top: 10px;
+    left: 395px;
+    background-color: red;
+    color: white;
+}
+
+.ppp:hover {
+    background-color: rgb(173, 28, 28);
+}
+
+.part1_element2 {
+    float: left;
+    position: absolute;
+    top: -4px;
+    left: 500px;
+}
+
+.part1_element2 input {
+    width: 500px;
+    box-sizing: border-box;
+    border: 3px solid #f52f3e;
+    height: 38px;
+    outline: none;
+
+}
+
+.aaa span {
+    font-size: 12px;
+    margin-left: 20px;
+    color: #C3ACA5;
+}
+
+.part1_element3 {
+    position: absolute;
+    top: 10px;
+    right: 335px;
+    float: left;
+    margin-left: 30px;
+}
+
+.part1_element3>span {
+    margin-top: 10px;
+}
+
+.part1_element4 {
+    float: left;
+    position: absolute;
+    top: 10px;
+    right: 225px;
+}
+
+.part2_element1>select {
+    width: 230px;
+    height: 40px;
+    color: white;
+    background-color: #f52f3e;
+    text-align: center;
+    line-height: 40px;
+}
+
+.part2 {
+    margin-top: 12px;
+}
+
+.part2_element {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.part2_element>div:hover {
+    color: red;
+}
+
+.part2_element div {
+    float: left;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.part2_element>div>img {
+    position: absolute;
+    top: 144px;
+    right: 60px;
+}
+
+.part3 {
+    width: 1536px;
+    margin-top: 3px;
+}
+
+.part3_banner {
+    margin: 0auto;
+}
+
+.part3_banner>img {
+    display: block;
+    width: 100%;
+}
+
+.part4 {
+    margin-top: 55px;
+    width: 1536px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.part4>div {
+    margin: 0 auto;
+    float: left;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    -ms-transition: ease-out 0.5s;
+    -o-transition: ease-out 0.5s;
+}
+
+.part4>div:hover {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+}
+
+.part_button {
+    width: 1536px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: 60px;
+    height: 80px;
+}
+
+.part_button>div {
+    float: left;
+
+}
+
+.part_button>div>div {
+    margin: 0 auto;
+    width: 301px;
+    height: 60px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.kkk {
+    margin-left: 130px;
+
+}
+
+.aaaa {
+    margin-top: 5px;
+    border-left: 1px solid #e8e8e8;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    line-height: 60px;
+
+}
+
+.part_button>div>div>span {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #302e33;
+    margin-top: -10px;
+
+}
+
+.part_button2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.part_button2>div {
+    float: left;
+}
+
+.part_button2>div>ul {
+    list-style: none;
+}
+
+.q>img {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.part_button2>div>ul>li:nth-child(1) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333
+}
+
+.part_button2>div>ul>li:not(:nth-child(1)) {
+    font-size: 12px;
+    color: #8b8b8b;
+    margin-top: 10px;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.part {
+    width: 1000px;
+}
+
+part>div>img {
+    display: block;
+    width: 1000px;
+}
+
+
+/*背景层*/
+#popLayer {
+    display: none;
+    background-color: rgba(202, 196, 196, 0.774);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+    /* 只支持IE6、7、8、9 */
+}
+
+/*弹出层*/
+#popBox {
+    display: none;
+    background-color: #FFFFFF;
+    z-index: 11;
+    width: 350px;
+    height: 400px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 15px;
+}
+
+#popBox .close {
+    text-align: right;
+    margin-right: 5px;
+    background-color: #F8F8F8;
+}
+
+/*关闭按钮*/
+#popBox .close a {
+    text-decoration: none;
+    color: #2D2C3B;
+}
+
+.btn {
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    width: 210px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 45px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.tc>div>input {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 30px;
+    outline: none;
+    z-index: 1998;
+}
+
+.tc>div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.tc_fs {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearFloat:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearFloat {
+    zoom: 1;
+}
