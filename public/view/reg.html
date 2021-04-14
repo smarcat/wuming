@@ -19,11 +19,11 @@
             <div>
                 <div class="part4">
                     <p>欢迎注册</p>
-                    <span>已有账号？ <a href="">登录</a></span><br>
-                    用户名<input type="text" placeholder="请输入用户名"><br>
-                    手机号<input type="text" placeholder="用于找回账号和密码"><br>
-                    密码 &nbsp; <input type="text" placeholder="设置登录密码"><br>
-                    <div>注册</div>
+                    <span>已有账号？ <a href="./index.html">登录</a></span><br>
+                    用户名<input type="text" placeholder="请输入用户名" id="uname"><br>
+                    手机号<input type="text" placeholder="用于找回账号和密码" id="phone"><br>
+                    密码 &nbsp; <input type="text" placeholder="设置登录密码" id="upwd"><br>
+                    <div id="btn">注册</div>
 
                     <input type="radio" class="aaa"><span class="bbb">阅读并接受《用户协议》及《隐私权保护声明》</span>
                 </div>
@@ -32,5 +32,52 @@
 
     </div>
 </body>
+<script>
+    var uanem =document.getElementById('uname');
+    var phone =document.getElementById('phone');
+    var upwd =document.getElementById('upwd');
+    btn.onclick =function(){
+        
+        var reg1=/^[0-9]{11}$/
+        var reg = /^[a-zA-Z0-9]{3,12}$/;
+        if(!phone.value){
+          alert('手机号不能为空')
+        }else if(!uname.value){
+            alert('账号不能为空')
+        }else if(!upwd.value){
+            alert('密码不能为空')
+        }else if (!reg.test(uname.value)) {
+            alert('用户名格式错误');
+            return;
+        } else if (!reg.test(upwd.value)) {
+            alert('密码格式错误');
+            return;
+        } else if (!reg1.test(phone.value)){
+            alert('手机号格式错误')
+        }else {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function (){
+                if(xhr.readyState===4 && xhr.status===200){
+                    var obj =JSON.parse(xhr.responseText)
+                    alert(obj.msg);
+                    location.href='./index.html'
+
+                  
+                }  
+            }
+            let url ='http://127.0.0.1:8080/user_reg/reg';
+            xhr.open('POST',url,true);
+            xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(`uname=${uname.value}&phone=${phone.value}&upwd=${upwd.value}`)
+        }
+
+
+        }
+        
+
+
+    
+
+</script>
 
 </html>

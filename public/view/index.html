@@ -23,7 +23,7 @@
                 <div class="head_left_font ">
                     <span>Hi,欢迎来到 九川竹木网上商城！</span>
                     <input type="button" name="popBox" value="请登录" onclick="popBox()">
-                    <a href="#">请注册</a>
+                    <a href="./reg.html">请注册</a>
                 </div>
 
                 <div class="head_right_font">
@@ -42,6 +42,7 @@
                         <div><img src="../img/icon/gouwu.png" alt=""><a href="javascript:;">&nbsp; &nbsp;我的订单</a></div>
                         <div><img src="../img/icon/收藏.png" alt=""><a href="javascript:;">&nbsp; &nbsp;我的收藏</a></div>
                         <div><img src="../img/icon/灯泡.png" alt=""><a href="javascript:;">&nbsp; &nbsp;帮助中心</a></div>
+                        <span id="sa"></span>
                     </div>
                 </div>
 
@@ -81,13 +82,10 @@
         <div class="part2">
             <div class="part2_element clearFloat">
                 <div class="part2_element1">
-                    <select name="" id="">
-                        <option value="">全部商品</option>
-                        <option value="">javascript</option>
-                        <option value="">javascript</option>
-                        <option value="">javascript</option>
-                        <option value="">javascript</option>
-                    </select>
+                    <div class="baba">全部商品
+                        <p class="son"></p>
+                    </div>
+                    
                 </div>
                 <div>
                     首页
@@ -228,7 +226,6 @@
 
 
 
-
         <div id="popLayer"></div>
         <div id="popBox">
             <div class="close">
@@ -240,13 +237,13 @@
                         <img src="../img/icon/download.png" alt="">
                     </div>
                     <div>
-                        <input type="text"><br>
-                        <input type="text">
-                        <div class="btn">登录</div>
+                        <input type="text" id="uname"><br>
+                        <input type="text" id="upwd">
+                        <div class="btn" id="btn">登录</div>
                     </div>
                     <div class="tc_fs">
                         <span>还没有账号？</span>
-                        <a href="">注册</a>
+                        <a href="./reg.html">注册</a>
                     </div>
 
                 </div>
@@ -268,7 +265,49 @@
                 popBox.style.display = "none";
                 popLayer.style.display = "none";
             }
+             
+            btn.onclick=function(){
+                var uname =document.getElementById('uname');
+                var upwd =document.getElementById('upwd');
+                
+                var reg=/^[a-zA-Z0-9]{3,12}$/;
+                if(!uname.value){
+                    alert('用户名不能为空');
+                }else if(!upwd.value){
+                    alert('密码不能为空');
+                }else if(!reg.test(uname.value)){
+                    alert('用户名格式错误');
+                }else if(!reg.test(upwd.value)){
+                    alert('密码格式错误');
+                }else{
+                    var xhr =new XMLHttpRequest();
+                    xhr.onreadystatechange=function(){
+                        if(xhr.readyState===4&&xhr.status===200){
+                            var obj = JSON.parse(xhr.responseText)
+                            alert(obj.msg) ;
+                            // location.href='./index.html'
+                            var sa =document.getElementById('sa');
+                            closeBox();
+                            sa.innerHTML =`尊敬的${uname.value}欢迎您`
+                        }
+                    }
+                    var url ='http://127.0.0.1:8080/user_login/login'
+                    xhr.open('POST',url,true);
+                    xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
+                    xhr.send(`uname=${uname.value}&upwd=${upwd.value}`)
+                }
+            }
+
+
+
+
+
+
+
+
+
         </script>
+
 
 
     </div>

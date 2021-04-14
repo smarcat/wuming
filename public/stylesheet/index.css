@@ -34,6 +34,9 @@ li {
     float: left;
     font-size: 12px;
 }
+#sa{
+    margin-left: 15px;
+}
 
 .head_right_font {
     float: right;
@@ -152,13 +155,30 @@ li {
     right: 225px;
 }
 
-.part2_element1>select {
+.part2_element1>div:nth-child(1) {
     width: 230px;
     height: 40px;
     color: white;
     background-color: #f52f3e;
     text-align: center;
     line-height: 40px;
+}
+ .part2_element1{
+    position: relative;
+}
+
+.baba:hover  .son{
+    display: block;
+}
+.son{
+    width: 230px;
+    height: 387px;
+    background-color:rgba(202, 196, 196, 0.774);
+    z-index: 6;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: none;
 }
 
 .part2 {
