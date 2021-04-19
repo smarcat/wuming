@@ -223,9 +223,26 @@ li {
     display: block;
     width: 100%;
 }
+.center{
+    width: 1536px;
+    height: 80px;
+    margin-top: 30px;
+}
+.center>:nth-child(1){
+    width: 1536px;
+    margin: 0 auto;
+}
+.center>div>:nth-child(1){
+    font-size: 25px;
+    text-align: center;
+}
+.center>div>:nth-child(2){
+    font-size: 16px;
+    text-align: center;
+}
 
 .part4 {
-    margin-top: 55px;
+    margin-top: 20px;
     width: 1536px;
     display: flex;
     flex-wrap: nowrap;
@@ -233,6 +250,8 @@ li {
 }
 
 .part4>div {
+    width: 190px;
+    height: 280px;
     margin: 0 auto;
     float: left;
     transition: ease-out 0.5s;
@@ -241,6 +260,9 @@ li {
     -ms-transition: ease-out 0.5s;
     -o-transition: ease-out 0.5s;
 }
+.part4>div>a>img{
+    width: 100%;
+}
 
 .part4>div:hover {
     transform: scale(1.1, 1.1);
@@ -248,6 +270,62 @@ li {
     -moz-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1);
+}
+.part5{
+    width: 1516px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.part5>div{
+    width: 190px;
+    height: 150px;
+}
+.part5>div:hover{
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+}
+.part5>div>a>img{
+    width: 100%;
+}
+.part6{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.part6>div{
+    width: 190px;
+    height: 298px;
+    margin-left: 20px;
+}
+.part6 img{
+    width: 100%;
+}
+#img0{
+    width: 385px;
+    height: 270px;
+   
+}
+#img5{
+    width: 385px;
+    height: 270px;
+   
+}
+#img10{
+    width: 385px;
+    height: 270px;
+   
+}
+.part6>div:hover{
+        transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -o-transform: scale(1.1, 1.1);
 }
 
 .part_button {

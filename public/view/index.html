@@ -91,16 +91,16 @@
                     首页
                 </div>
                 <div>
-                    服装城
+                    上装
                 </div>
                 <div>
-                    美妆城
+                    下装
                 </div>
                 <div>
-                    新品首发
+                    配饰
                 </div>
                 <div>
-                    低价抢购
+                    特色商品
                 </div>
                 <div>
                     <img src="../img/uoloude/nav-ad.jpg" alt="">
@@ -112,21 +112,137 @@
             <div class="part3_banner"><img src="../img/uoloude/banner1.jpg" alt=""></div>
         </div>
 
+        <div class="center">
+            <div class="center_element">
+                <p>今 / 日 / 好 / 店</p>
+                <p>活动连连，逛店首选</p>
+            </div>
+        </div>
+
         <div class="part4 clearFloat">
-            <div>
-                <a href=""> <img src="../img/uoloude/13.jpg" alt=""></a>
+           <div>
+               <a href="">
+                   <img src="../img/img_gshop/1.webp" alt="">
+               </a>
+           </div>
+           <div>
+            <a href="">
+                <img src="../img/img_gshop/2.webp" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="../img/img_gshop/3.webp" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="../img/img_gshop/4.webp" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="../img/img_gshop/5.webp" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="">
+                <img src="../img/img_gshop/6.webp" alt="">
+            </a>
+        </div>
+        </div>
+
+        <div class="center">
+            <div class="center_element">
+                <p>甄 / 选 / 品 / 牌</p>
+                <p>大牌汇集，品质甄选</p>
             </div>
-            <div>
-                <a href=""> <img src="../img/uoloude/14.jpg" alt=""></a>
-            </div>
-            <div>
-                <a href=""><img src="../img/uoloude/15.jpg" alt=""></a>
-            </div>
-            <div>
+        </div>
+
+        <div class="part5">
+              <div>
+                  <a href="">
+                      <img src="../img/pinpai_img/1.webp" alt="">
+                  </a>
+              </div>
+
+              <div>
                 <a href="">
-                    <img src="../img/uoloude/16.jpg" alt="">
+                    <img src="../img/pinpai_img/2.webp" alt="">
                 </a>
             </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/3.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/4.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/5.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/6.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/7.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/8.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/9.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/10.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/11.webp" alt="">
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <img src="../img/pinpai_img/12.webp" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="center_element">
+                <p>风 / 格 / 聚 / 焦</p>
+                <p>精准聚焦 · 逛店必备</p>
+            </div>
+        </div>
+     
+        <div class="part6" id="data">
+            
+
         </div>
 
         <div class="part_button  ">
@@ -296,6 +412,33 @@
                     xhr.setRequestHeader('content-Type', 'application/x-www-form-urlencoded');
                     xhr.send(`uname=${uname.value}&upwd=${upwd.value}`)
                 }
+            }
+
+            window.onload=function(){
+                var xhr =new XMLHttpRequest();
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState===4&xhr.status===200){
+                        console.log(xhr.responseText);
+                        var obj=JSON.parse(xhr.responseText) ;
+                        
+                        
+
+                        var data =document.getElementById('data');
+                        var kk ='';
+                        for(var i=0;i<obj.length ;i++){
+                            kk+=`
+                            <div  id='img${i}'>
+                <img src="../img/img_gshop/${obj[i].url}"  alt="">
+            </div>
+                            `
+                            
+                           
+                        }
+                        data.innerHTML=kk
+                    }
+                }
+                xhr.open('GET','http://127.0.0.1:8080/index_shop/shop',true)
+                xhr.send()
             }
 
 
