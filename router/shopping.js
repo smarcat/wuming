@@ -12,6 +12,18 @@ const pool = require('../mysql/pool.js');
      })
  })
 
+//  花儿店铺商品展示
+r.get('/shops',(req,res)=>{
+    pool.query('select * from img_goods',(err,result)=>{
+        if(err){
+            console.log(err);
+            return;
+        }
+        res.send(result);
+    })
+})
+
+
 
 
 
